@@ -1,3 +1,165 @@
+/* Global Default Styles */
+
 * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    min-width: 340px;
+
+/* Hide scrollbar but allow scrolling */
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Cool Background Image */
+
+#background-image {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1516721951823-4f214c97eb4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    opacity: .15;
+}
+
+/* Header & Main Nav as a Left Sidebar */
+
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-width: 340px;
+    color: white;
+    height: 33vh;
+    min-height: 240px;
+    z-index: 2;
+}
+
+header a {
+    color: orange;
+    opacity: .6;
+    line-height: 1.5em;
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: 1;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 200%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+
+/* Main Content Area */
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+main h2 {  
+    margin-bottom: 20px;
+    margin-right: 50px;
+    min-width: 150px;
+}
+
+main h3 {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.circle-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    border: solid orange 4px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+section a {
+    color: orange;
+    opacity: 0.7;
+}
+
+section a:hover {
+    opacity: 1;
+}
+
+section ul {
+    margin-left: 10px;
+    list-style-type: circle;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: solid orange 2px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Rules */
+
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+    
+    header {
+        top: 0;
+        bottom: 0;
+        position: sticky;
+        position: -webkit-sticky;
+    }   
+
+    article {
+        flex-direction: row;
+    }
 }
