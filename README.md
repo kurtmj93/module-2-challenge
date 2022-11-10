@@ -1,8 +1,8 @@
-# Module-2-Challenge
+# My Front End Portfolio
 
 ## Deployed Link
 
-
+[Kurt Jensen | Front End Portfolio] (https://kurtmj93.github.io/my-front-end-portfolio/)
 
 ## Screenshots
 
