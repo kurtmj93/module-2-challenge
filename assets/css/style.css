@@ -1,4 +1,4 @@
-/* Global Default Styles */
+/* Global Reset Styles */
 
 * {
     box-sizing: border-box;
@@ -6,6 +6,8 @@
     margin: 0;
     font-family: sans-serif;
 }
+
+/* Body Wrapper */
 
 body {
     display: flex;
@@ -37,21 +39,21 @@ body::-webkit-scrollbar {
     opacity: .15;
 }
 
-/* Header & Main Nav as a Left Sidebar */
+/* Header & Main Nav */
 
 header {
     display: flex;
     flex-direction: column;
     padding: 20px;
     min-width: 340px;
-    color: white;
+    color: #d3d3d3;
     height: 33vh;
-    min-height: 240px;
+    min-height: 340px;
     z-index: 2;
 }
 
 header a {
-    color: orange;
+    color: #Fb4f14;
     opacity: .6;
     line-height: 1.5em;
     text-decoration: none;
@@ -63,12 +65,14 @@ header a:hover {
 
 header h1 {
     margin-bottom: 20px;
+    text-transform: lowercase;
 }
 
 nav {
     display: flex;
     flex-direction: column;
     font-size: 200%;
+    text-transform: lowercase;
 }
 
 nav ul {
@@ -83,7 +87,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    color: white;
+    color: #d3d3d3;
     min-height: 100vh;
     width: 100%;
     z-index: 2;
@@ -93,25 +97,18 @@ main h2 {
     margin-bottom: 20px;
     margin-right: 50px;
     min-width: 150px;
+    text-transform: lowercase;
 }
 
 main h3 {
     margin-bottom: 10px;
     margin-right: 10px;
+    text-transform: lowercase;
 }
 
 article {
     display: flex;
     flex-direction: column;
-}
-
-.circle-img {
-    height: 150px;
-    width: 150px;
-    border-radius: 100px;
-    border: solid orange 4px;
-    margin-right: 50px;
-    margin-bottom: 20px;
 }
 
 section {
@@ -124,7 +121,7 @@ section p {
 }
 
 section a {
-    color: orange;
+    color: #Fb4f14;
     opacity: 0.7;
 }
 
@@ -137,15 +134,55 @@ section ul {
     list-style-type: circle;
 }
 
+/* Image Classes */
+
+
+.circle-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    border: solid #Fb4f14 4px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
 .hero-img {
     width: 100%;
     height: auto;
+    background-size: cover;
     border-radius: 10px;
-    border: solid orange 2px;
+    border: solid #Fb4f14 2px;
     margin-bottom: 10px;
 }
 
-/* Responsive Rules */
+/* ::before selectors to add stylistic text to headers without impacting accessibility/SEO */
+
+#about::before {
+    content: 'this is';
+    display: block;
+}
+
+#contact::before {
+    content: 'you can';
+    display: block;
+}
+
+#recent::before {
+    content: 'my most';
+    display: block;
+}
+
+#work::before {
+    content: 'this is';
+    display: block;
+}
+
+#portfolio::before {
+    content: 'this is ';
+}
+
+
+/* Responsive rules - mobile first design means these media selectors activate when screen gets larger. */
 
 @media screen and (min-width: 768px) {
     body {
@@ -162,4 +199,5 @@ section ul {
     article {
         flex-direction: row;
     }
+
 }
