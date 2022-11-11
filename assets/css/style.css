@@ -15,7 +15,7 @@ body {
     background-color: black;
     min-width: 340px;
 
-/* Hide scrollbar but allow scrolling */
+/* Hide Scrollbar But Allow Scrolling */
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
@@ -49,7 +49,7 @@ header {
     color: #d3d3d3;
     height: 33vh;
     min-height: 340px;
-    z-index: 2;
+    z-index: 1;
 }
 
 header a {
@@ -90,7 +90,7 @@ main {
     color: #d3d3d3;
     min-height: 100vh;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 
 main h2 {  
@@ -181,8 +181,34 @@ section ul {
     content: 'this is ';
 }
 
+/* Return to top button */ 
 
-/* Responsive rules - mobile first design means these media selectors activate when screen gets larger. */
+.return a {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #fb4f14;
+    opacity: .7;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: center;
+    z-index: 2;
+}
+
+.return a:hover {
+    opacity: .9;
+}
+
+/* Responsive rules - mobile first design means these media selectors 
+activate when screen gets larger. */
 
 @media screen and (min-width: 768px) {
     body {
@@ -198,6 +224,10 @@ section ul {
 
     article {
         flex-direction: row;
+    }
+
+    .return a {
+        visibility: hidden; /* This button is now unnecessary bc header becomes sticky. */
     }
 
 }
