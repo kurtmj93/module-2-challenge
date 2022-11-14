@@ -68,6 +68,7 @@ header a {
 
 header a:hover {
     opacity: 1;
+    transition: 0.4s ease-out;
 }
 
 header h1 {
@@ -134,6 +135,7 @@ section a {
 
 section a:hover {
     opacity: 1;
+    transition: 0.4s ease-out;
 }
 
 section ul {
@@ -154,12 +156,17 @@ section ul {
 }
 
 .hero-img {
+    border: solid transparent 2px;
     width: 100%;
     height: auto;
     background-size: cover;
     border-radius: 10px;
-    border: solid var(--accent-color) 2px;
     margin-bottom: 10px;
+}
+
+.hero-img:hover {
+    border: solid var(--accent-color) 2px;
+    transition: 0.4s ease-out;
 }
 
 /* ::before selectors to add stylistic text to headers without impacting accessibility/SEO */
@@ -212,6 +219,7 @@ section ul {
 
 .return a:hover {
     opacity: .9;
+    transition: 0.4s ease-out;
 }
 
 /* Responsive rules - mobile first design means these media selectors 
